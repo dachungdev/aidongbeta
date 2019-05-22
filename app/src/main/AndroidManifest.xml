@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aidongprover2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/iconicon"
+        android:label="爱动beta"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/iconicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FunctionActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ShowNews" />
+        <activity android:name=".ShowForumDetail" />
+        <activity android:name=".NewForum"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".ShowStudy" />
+        <activity android:name=".ShowStudyDetail" />
+        <activity android:name=".LoginUsers" />
+        <activity android:name=".ShowBasicStudyDetail" />
+        <activity android:name=".ShowFbStudyDetail" />
+        <activity android:name=".ShowFbBasicStudyDetail" />
+        <activity android:name=".ShowShopItemDetail" />
+        <activity android:name=".AboutUsActivity"></activity>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+    </application>
+
+</manifest>

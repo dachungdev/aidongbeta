@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShowBasicStudyDetail">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/studyBasicDetailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#000000">
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/studyBasicKnowToo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:focusable="true">
+
+            <Button
+                android:id="@+id/rulerOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="规则"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/actionOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="动作"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/skillOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="技巧"
+                android:background="@drawable/selector2"/>
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/actionLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/driBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="运球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/driLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dribbleone_string"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dribbletwo_string"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/dri"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dribblethree_string"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/dritwo"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lowdri"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/lowdri"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/highdri"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/higtdri"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maxdri"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/maxdri"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/passTBBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="传球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/passTBText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/passTheBall_string"/>
+
+            <Button
+                android:id="@+id/shotBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="投篮"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/shotLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shotone_string"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shottwo"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/shotone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shotthree_string"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/shottwo"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shotfour"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/shotthree"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shotfinal"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/layupBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="三步上篮"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/layupLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layup_string"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layupone_string"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/layupone"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layuptwo_string"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/layuptwo"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layupthree_string"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/layupthree"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/rulerLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/attackBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="进攻"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <Button
+                android:id="@+id/defenseBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="防守"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/skillLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/skDriBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="熟练运球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/skDriLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skDri_string"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skDrione_string"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skDritwo_string"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skDrithree_string"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/skShotBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="精准投篮"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/skShotText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/skBackyardBasketball_string"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/cooBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="默契配合"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/cooText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/skCooperation_string"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

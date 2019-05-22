@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShowStudy">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/studyToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#000000">
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:focusable="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <Button
+                android:id="@+id/studyWarmKnowOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="运动前后"
+                android:background="@drawable/selector2"
+                android:focusableInTouchMode="true"/>
+
+            <Button
+                android:id="@+id/studyBasicKnowOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="基础"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/studyAdvancedKnowOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="训练课程"
+                android:background="@drawable/selector2"/>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/warmKnowScro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/warmKnowDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/reshen_btn"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="热身运动"
+            android:textSize="50dp"
+            android:textColor="#fff"
+            android:background="#e0d5cece"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffff"/>
+
+        <Button
+            android:id="@+id/yufang_btn"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="预防受伤"
+            android:textSize="50dp"
+            android:textColor="#fff"
+            android:background="#e0d5cece"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffff"/>
+
+        <Button
+            android:id="@+id/chuli_btn"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="受伤后的处理"
+            android:textSize="50dp"
+            android:textColor="#fff"
+            android:background="#e0d5cece"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffff"/>
+
+        <Button
+            android:id="@+id/tiaoyang_btn"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="调养休息"
+            android:textSize="50dp"
+            android:textColor="#fff"
+            android:background="#e0d5cece"/>
+    </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/basicKnowDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/ruler_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="200"
+            android:text="规则"
+            android:textSize="50dp"
+            android:textColor="#fff"
+            android:background="#e0d5cece"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="#ffff"/>
+
+        <Button
+            android:id="@+id/action_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="200"
+            android:text="动作"
+            android:textSize="50dp"
+            android:textColor="#fff"
+            android:background="#e0d5cece"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="#ffff"/>
+
+        <Button
+            android:id="@+id/skill_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="200"
+            android:text="技巧"
+            android:textSize="50dp"
+            android:textColor="#fff"
+            android:background="#e0d5cece"/>
+    </LinearLayout>
+</LinearLayout>

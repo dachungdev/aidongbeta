@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShowStudyDetail">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/studyDetailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#000000">
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/studyWarmKnowLin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:focusable="true">
+
+            <Button
+                android:id="@+id/reshenOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="热身运动"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/yufangOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="预防受伤"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/chuliOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="受伤后的处理"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/tiaoyangOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="调养休息"
+                android:background="@drawable/selector2"/>
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/reshenLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/warmUp_string"/>
+
+        <Button
+            android:id="@+id/jogBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="慢跑"
+            android:gravity="center_vertical"
+            android:textSize="25dp"
+            android:paddingLeft="30dp"
+            android:textColor="#000"
+            android:background="#ffff"/>
+
+        <TextView
+            android:id="@+id/jogText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/jog_string"/>
+
+        <Button
+            android:id="@+id/muscleStretchingBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="肌肉拉伸"
+            android:gravity="center_vertical"
+            android:textSize="25dp"
+            android:paddingLeft="30dp"
+            android:textColor="#000"
+            android:background="#ffff"/>
+
+        <LinearLayout
+            android:id="@+id/muscleStretchingLin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mucleStre_string"/>
+
+            <Button
+                android:id="@+id/neckStretchingBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="颈部拉伸"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="60dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/neckStretchingLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/neckStre_string"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/neckstre"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/shoulderStretchingBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="肩部拉伸"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="60dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/shoulderStreLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shoulderStre_string"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/shoulderstre"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/legStretchingBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="腿部拉伸"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="60dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/legStreLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/legStreone"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/legstre"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/legStretwo"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/legStrethree"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/jointMotionBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="关节运动"
+            android:gravity="center_vertical"
+            android:textSize="25dp"
+            android:paddingLeft="30dp"
+            android:background="#ffff"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/jointAcText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/joinAc_string"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/jointMotionLin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/waistAroundBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="腰部环绕"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="60dp"
+                android:background="#ffff"
+                android:textColor="#000"/>
+
+            <LinearLayout
+                android:id="@+id/waistArLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/waistAround_string"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/waistar"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/kneeJointAroundBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="膝关节环绕"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="60dp"
+                android:background="#ffff"
+                android:textColor="#000"/>
+
+            <LinearLayout
+                android:id="@+id/kneeJointArLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kneeAround_string"/>
+
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/kneear"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/ankleJointBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="脚踝关节环绕"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="60dp"
+                android:background="#ffff"
+                android:textColor="#000"/>
+
+
+            <LinearLayout
+                android:id="@+id/ankleJointLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ankleAround_string"/>
+
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/ankiear"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/shuttleRunBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="折返跑"
+            android:gravity="center_vertical"
+            android:textSize="25dp"
+            android:paddingLeft="30dp"
+            android:background="#ffff"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/shuttleRunText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/shuttleRun_string"/>
+
+        <Button
+            android:id="@+id/warmUpWithABallBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="持球热身"
+            android:gravity="center_vertical"
+            android:textSize="25dp"
+            android:paddingLeft="30dp"
+            android:background="#ffff"
+            android:textColor="#000"/>
+
+        <LinearLayout
+            android:id="@+id/warmUpWithABallLin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/warmUpWithBalls_string"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/warmwithball"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/warmUpBallone_string"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/warmUpBallTwo_string"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/warmUpBallthree_string"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/yufangLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/fullyWarmUpBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="充分热身"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/fullyWarmUpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/fullyWarmUp_string"/>
+
+            <Button
+                android:id="@+id/snakerSelectionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="装备选择"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/snakerSelectionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/snakerSelection_string"/>
+
+            <Button
+                android:id="@+id/mattersNeedingBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="场上注意事项"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/mattersNeedingText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/mattersNeeding_string"/>
+
+            <Button
+                android:id="@+id/matterAfSportBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="运动后注意事项"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/matterAfSportText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/mattersAfterSport_string"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/chuliLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/postInJury_string"/>
+
+            <Button
+                android:id="@+id/muscleStrainBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="肌肉拉伤"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/muscleStrainText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/muscleStrain_string"/>
+
+            <Button
+                android:id="@+id/jointStrainBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="关节拉伤"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/jointStrainText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/jointStrain_string"/>
+
+            <Button
+                android:id="@+id/abrasionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="皮肤擦伤"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/abrasionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/abrasion_string"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/tiaoyangLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/muscleStrainAfBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="肌肉拉伤后"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/muscleStrainAfText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/muscleStrainAf_string"/>
+
+            <Button
+                android:id="@+id/jointStrainAfBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="关节拉伤后"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/jointStrainAfText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/jointStrainAf_string"/>
+
+            <Button
+                android:id="@+id/abrasionAfBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="皮肤擦伤后"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/abrasionAfText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/abrasionAf_string"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/register_mainAc"
+        android:icon="@mipmap/register"
+        android:title="注册"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/login_mainAc"
+        android:icon="@mipmap/login"
+        android:title="登录"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/aboutUs"
+        android:icon="@mipmap/ic_settings"
+        android:title="关于我们"
+        app:showAsAction="never"/>
+
+</menu>

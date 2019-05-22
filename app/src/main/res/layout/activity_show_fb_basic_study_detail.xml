@@ -1,0 +1,1956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShowFbBasicStudyDetail">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/studyFbBasicDetailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#000000">
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:focusable="true">
+
+            <Button
+                android:id="@+id/fbRuleOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="规则"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/fbMotionOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="动作"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/fbSkillOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="技巧"
+                android:background="@drawable/selector2"/>
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/fbRuleLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fbBasicRule_string"/>
+
+            <Button
+                android:id="@+id/fbAreanBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="比赛场地"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbAreanLin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/fbSiteAreaBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="场地面积"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSiteAreaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbSiteArea"/>
+
+                <Button
+                    android:id="@+id/fbGoalAreaBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="球门区"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbGoalAreaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbGoalArea"/>
+
+                <Button
+                    android:id="@+id/fbPenaltyAreaBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="罚球区"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbPenaltyAreaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbPenaltyArea"/>
+
+                <Button
+                    android:id="@+id/fbCornerAreaBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="角球区"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbCornerAreaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbCornerArea"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbMatchTimeBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="比赛时间"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbMatchTimeLin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbMatchTime"/>
+
+                <Button
+                    android:id="@+id/fbHalfTimeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="中场休息"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbHalfTimeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbHalftime"/>
+
+                <Button
+                    android:id="@+id/fbLossTimeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="扣除损失时间"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbLossTimeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbLossTime"/>
+
+                <Button
+                    android:id="@+id/fbTimePenaltyKickBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="罚球点球"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbTimePenaltyKickText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbTimePenaltyKick"/>
+
+                <Button
+                    android:id="@+id/fbInjuryTimeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="伤停补时"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbInjuryTimeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbTimeInjuryTime"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbDeadBallBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="死球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbDeadBallLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/fbDeadBallInGameBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="比赛成死球"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbDeadBallInGameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbDeadBallInGame"/>
+
+                <Button
+                    android:id="@+id/fbDeadBallGoOnBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="比赛进行"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbDeadBallGoOnText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbDeadBallGoOn"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbScoringMethodBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="进球得分"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbScoringMethodLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/fbGoalScoreBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="进球得分"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbGoalScoreText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbGoalScore"/>
+
+                <Button
+                    android:id="@+id/fbWiningTeamBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="获胜球队"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbWiningTeamText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbWiningTeam"/>
+
+                <Button
+                    android:id="@+id/fbCompetitionRulesBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="竞赛规则"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbCompetitionRulesText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbCompetitionRules"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbOffsideBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="越位"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbOffsideLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/fbOffsidePositionBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="越位位置"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbOffsidePositionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbOffsidePosition"/>
+
+                <Button
+                    android:id="@+id/fbOffsideFoulnBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="越位犯规"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbOffsideFoulnText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbOffsideFoul"/>
+
+                <Button
+                    android:id="@+id/fbOffsideNoFoulBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="没有越位犯规"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbOffsideNoFoulText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbOffsideNoFoul"/>
+
+                <Button
+                    android:id="@+id/fbOffsidePunishBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="越位后的判罚"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbOffsidePunishText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbOffsidePunish"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbFoulConductBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="犯规行为"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbFoulConductLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbFoulConduct"/>
+
+                <Button
+                    android:id="@+id/fbFoulDirectFreeKickBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="直接任意球"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbFoulDirectFreeKickText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbFoulDirectFreeKick"/>
+
+                <Button
+                    android:id="@+id/fbFoulPenaltyShotBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="罚球点球"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbFoulPenaltyShotText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbPenaltyShot"/>
+
+                <Button
+                    android:id="@+id/fbWarningFoulBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="警告犯规"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbWarningFoulText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbWarningFoul"/>
+
+                <Button
+                    android:id="@+id/fbFoulOutBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="罚出场犯规"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbFoulOutText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbFoulOut"/>
+
+                <Button
+                    android:id="@+id/fbFoulIndirectFreeKickBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="间接任意球"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbFoulIndirectFreeKickText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbFoulIndirectFreeKick"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbFreeKickBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="任意球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbFreeKickLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbFreeKick"/>
+
+                <Button
+                    android:id="@+id/fbDirectFreeKickBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="直接任意球"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbDirectFreeKickText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbDirectFreeKick"/>
+
+                <Button
+                    android:id="@+id/fbIndirectFreeKickBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="间接任意球"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbIndirectFreeKickLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/fbIFKsignalBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="信号"
+                        android:textSize="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="90dp"
+                        android:textColor="#000"
+                        android:background="#ffff"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKsignalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="@string/fbIFKsignal"/>
+
+                    <Button
+                        android:id="@+id/fbIFKgoalBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="球进门"
+                        android:textSize="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="90dp"
+                        android:textColor="#000"
+                        android:background="#ffff"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKgoalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="@string/fbIFKgoal"/>
+
+                    <Button
+                        android:id="@+id/fbIFKPositionBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="任意球的位置"
+                        android:textSize="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="90dp"
+                        android:textColor="#000"
+                        android:background="#ffff"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKPositionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="@string/fbIFKposition"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/fbIFKfoulBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="违规"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbIFKfoulLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfoul"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKfouloneText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfoulone"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKfoultwoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfoultwo"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKfoulthreeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfoulthree"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKfoulfourText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfoulfour"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKfoulfiveText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfoulfive"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfoulsix"
+                        android:background="#ffff"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKfoulsevenText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfoulseven"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKfouleightText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfouleight"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKfoulnightText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfoulnight"/>
+
+                    <TextView
+                        android:id="@+id/fbIFKfoultenText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbIFKfoulten"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbThrowInBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="掷界外球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbThrowInLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbThrowIn"/>
+
+                <Button
+                    android:id="@+id/fbTIdetermineBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="判定"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbTIdetermineText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbTIdetermine"/>
+
+                <Button
+                    android:id="@+id/fbTIprogramBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="程序"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbTIprogramText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbTIprogram"/>
+
+                <Button
+                    android:id="@+id/fbTIprogramFoulBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="违规/判罚"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbTIprogramFoulLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="由除守门员外的队员掷界外球:"
+                        android:background="#ffff"/>
+
+                    <TextView
+                        android:id="@+id/fbTIfouloneoneText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbTIfouloneone"/>
+
+                    <TextView
+                        android:id="@+id/fbTIfoulonetwoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbTIfoulonetwo"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="由守门员掷界外球"
+                        android:background="#ffff"/>
+
+                    <TextView
+                        android:id="@+id/fbTIfoultwooneText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbTIfoultwoone"/>
+
+                    <TextView
+                        android:id="@+id/fbTIfoultwotwoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbTIfoultwotwo"/>
+
+                    <TextView
+                        android:id="@+id/fbTIfoultwothreeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbTIfoultwothree"/>
+
+                    <TextView
+                        android:id="@+id/fbTIfoultwofourText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbTIfoultwofour"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbGoalKickBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="球门球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbGoalKickLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbGoalKick"/>
+
+                <Button
+                    android:id="@+id/fbGKdetermineBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="判定"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbGKdetermineText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbGKdetermine"/>
+
+                <Button
+                    android:id="@+id/fbGKprogramBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="程序"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbGKprogramText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbGKprogram"/>
+
+                <Button
+                    android:id="@+id/fbGKfoulBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="违规/判罚"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+                
+                <LinearLayout
+                    android:id="@+id/fbGKfoulLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fbGKfoulaText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbGKfoul"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="守门员外队员踢球门球"
+                        android:background="#ffff"/>
+
+                    <TextView
+                        android:id="@+id/fbGKfouloneoneText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbGKfouloneone"/>
+
+                    <TextView
+                        android:id="@+id/fbGKfoulonetwoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbGKfoulonetwo"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="守门员踢球门球"
+                        android:background="#ffff"/>
+
+                    <TextView
+                        android:id="@+id/fbGKfoultwooneText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbGKfoultwoone"/>
+
+                    <TextView
+                        android:id="@+id/fbGKfoultwotwoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbGKfoultwotwo"/>
+
+                    <TextView
+                        android:id="@+id/fbGKfoultwothreeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbGKfoultwothree"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbCornerKickBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="角球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbCornerKickLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbCornerKick"/>
+
+                <Button
+                    android:id="@+id/fbCKdetermineBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="判定"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbCKdetermineText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbCKdetermine"/>
+
+                <Button
+                    android:id="@+id/fbCKprogramBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="程序"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbCKprogramText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbCKprogram"/>
+
+                <Button
+                    android:id="@+id/fbCKprogramFoulBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="违规/判定"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbCKprogramFoulLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="由除守门员外的队员踢角球"
+                        android:background="#ffff"/>
+
+                    <TextView
+                        android:id="@+id/fbCKfouloneoneText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbCKfouloneone"/>
+
+                    <TextView
+                        android:id="@+id/fbCKfoulonetwoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbCKfoulonetwo"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="由守门员踢角球"
+                        android:background="#ffff"/>
+
+                    <TextView
+                        android:id="@+id/fbCKfoultwooneText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbCKfoultwoone"/>
+
+                    <TextView
+                        android:id="@+id/fbCKfoultwotwoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbCKfoultwotwo"/>
+
+                    <TextView
+                        android:id="@+id/fbCKfoultwothreeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbCKfoultwothree"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/fbMotionLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fbBasicMotion"/>
+
+            <Button
+                android:id="@+id/fbJugglingBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="颠球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbJugglingLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbJuggling"/>
+
+                <Button
+                    android:id="@+id/fbHowToJugglingBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="那么如何进行正脚背颠球呢？"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbHowToJugglingText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbJugglingOne"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbPassTBBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="传球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbPassTBLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/passTheBall_string"/>
+
+                <Button
+                    android:id="@+id/fbShortPassBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="短传"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbShortPassLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/shortpassImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbShotPass"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbShotPassone"/>
+
+                    <ImageView
+                        android:id="@+id/shortpassoneImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbShotPasstwo"/>
+
+                    <ImageView
+                        android:id="@+id/shortpasstwoImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbShotPassthree"/>
+
+                    <ImageView
+                        android:id="@+id/shortpassthreeImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbShotPassfour"/>
+
+                    <ImageView
+                        android:id="@+id/shortpassfourImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/fbLongPassBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="长传"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbLongPassLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbLongPass"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbLongPassone"/>
+
+                    <ImageView
+                        android:id="@+id/longpassoneImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbLongPasstwo"/>
+
+                    <ImageView
+                        android:id="@+id/longpasstwoImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbLongPassthree"/>
+
+                    <ImageView
+                        android:id="@+id/longpassthreeImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbStoppingBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="停球"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbStoppingLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbGoodStopping"/>
+
+                <ImageView
+                    android:id="@+id/goodstopImag"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbShitStopping"/>
+
+                <ImageView
+                    android:id="@+id/badstopImag"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <Button
+                    android:id="@+id/fbStoppinStepBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="步骤"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbStoppinStepLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbStoppingone"/>
+
+                    <ImageView
+                        android:id="@+id/stoponeImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/fbStoppinStepTexttwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbStoppingtwo"/>
+
+                    <ImageView
+                        android:id="@+id/stoptwoImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/fbStoppinStepTextthree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbStoppingthree"/>
+
+                    <ImageView
+                        android:id="@+id/stopthreeImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <ImageView
+                        android:id="@+id/messistopImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/fbStoppinStepTextfour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbStoppingfour"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/stopfourImag"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbDriBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="盘带"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbDriLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDri"/>
+
+                <ImageView
+                    android:id="@+id/whiteDriImag"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDriTrain"/>
+
+
+                <ImageView
+                    android:id="@+id/fbdrioneImag"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <Button
+                    android:id="@+id/fbDriTrainoneBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="训练一"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbDriTrainoneLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fbDriTrainoneText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDriTrainone"/>
+
+                    <ImageView
+                        android:id="@+id/fbdriImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/fbDriTrainoneoneText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDriTrainoneone"/>
+
+                    <ImageView
+                        android:id="@+id/fbdritwoImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+
+                <Button
+                    android:id="@+id/fbDriTraintwoBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="训练二"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbDriTraintwoLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fbDriTraintwoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDriTraintwo"/>
+
+                    <ImageView
+                        android:id="@+id/fbdrithreeImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/fbDriTraintwooneText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDriTraintwoone"/>
+
+                    <ImageView
+                        android:id="@+id/fbdrifourImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/fbDriTrainthreeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="训练三"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbDriTrainthreeLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fbDriTrainthreeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDriTrainthree"/>
+
+                    <ImageView
+                        android:id="@+id/fbdrifiveImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/fbDriTrainthreeoneText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDriTrainthreeone"/>
+
+                    <ImageView
+                        android:id="@+id/fbdrisixImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/fbDriTrainthreetwoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDriTrainthreetwo"/>
+
+                    <ImageView
+                        android:id="@+id/fbdrisevenImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/fbDriTrainthreethreeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDriTrainthreethree"/>
+
+                    <ImageView
+                        android:id="@+id/fbdrieightImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/fbDriTrainthreefourText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbDriTrainthreefour"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbShotBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="射门"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbShotLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbShot"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbShotone"/>
+
+                <ImageView
+                    android:id="@+id/fbshotoneImag"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbShottwo"/>
+
+                <ImageView
+                    android:id="@+id/fbshottwoImag"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbShotthree"/>
+
+                <ImageView
+                    android:id="@+id/fbshotthreeImag"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="梅西禁区内快速摆小腿射门"/>
+
+                <ImageView
+                    android:id="@+id/fbshotfourImag"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/fbSkillLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/fbSkPassingBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="过人技巧"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbSkPassingLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbSkPassing"/>
+
+                <Button
+                    android:id="@+id/fbSSFSBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="沉肩虚晃"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbSSFSLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbSkPassingone"/>
+
+                    <ImageView
+                        android:id="@+id/fbcrossoneImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbSkPassingoneone"/>
+
+                    <ImageView
+                        android:id="@+id/fbmessicrossImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/fbRnaldoBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="罗纳尔多切球"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbRnaldoLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbSkPassingtwo"/>
+
+                    <ImageView
+                        android:id="@+id/fbronaldocrossImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbSkPassingtwoone"/>
+
+                    <ImageView
+                        android:id="@+id/fbcrosstwoImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/fbCowsTailBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="牛尾巴过人"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <LinearLayout
+                    android:id="@+id/fbCowsTailLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbSkPassingthree"/>
+
+                    <ImageView
+                        android:id="@+id/fbcowsoneImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fbSkPassingthreeone"/>
+
+                    <ImageView
+                        android:id="@+id/fbcowstwoImag"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

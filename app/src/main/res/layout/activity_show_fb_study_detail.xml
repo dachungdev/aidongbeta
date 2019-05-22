@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShowFbStudyDetail">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/fbStudyDetailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#000000">
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/fbStudyWarmKnowLin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:focusable="true">
+
+            <Button
+                android:id="@+id/fbReshenOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="热身运动"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/fbYufangOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="预防受伤"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/fbChuliOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="受伤后的处理"
+                android:background="@drawable/selector2"/>
+
+            <Button
+                android:id="@+id/fbTiaoyangOp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="调养休息"
+                android:background="@drawable/selector2"/>
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/fbReshenLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/fbReshenText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fbWarmUp_string"/>
+
+            <Button
+                android:id="@+id/fbNormalWarmUpBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="常规热身运动"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbNormalWarmUpLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fbNormalWarmUpText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbNormalWarm_string"/>
+
+                <Button
+                    android:id="@+id/fbJogBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="慢跑"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbJogText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbJogging"/>
+
+                <Button
+                    android:id="@+id/fbNormalMuscleStrainBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="拉伸身体肌肉"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbNormalMuscleStrainText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbNormalMuscleStrain"/>
+
+                <Button
+                    android:id="@+id/fbVSRBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="变速跑"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbVSRText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbVariableSpeedRunning"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbSpecialWarmUpBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="专项热身运动"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbSpecialWarmUpLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbSpecialWarm_string"/>
+
+                <Button
+                    android:id="@+id/fbSpecialWarmForwardBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="前锋"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSpecialWarmForwardText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbSpecailWarmForward"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/fbSpecialWarmMidfielderBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="中场"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSpecialWarmMidfielderText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbSpecailWarmMidfielder"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/fbSpecialWarmBackfielderBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="后卫"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSpecialWarmBackfielderText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbSpecialWarmBackfielder"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/fbSpecialWarmGoalKeeperBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="守门员"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSpecialWarmGoalKeeperText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbSpecialWarmGoalKeeper"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/fbYufangLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/yufangImg"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fbPreOfInjury"/>
+
+            <Button
+                android:id="@+id/fbSnakerSelBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="球鞋的种类"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbSnakerSelLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbSnakerSel"/>
+
+                <Button
+                    android:id="@+id/fbSnakerSGBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SG(钢钉足球鞋)"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSnakerSGText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbSnakerSG"/>
+
+                <Button
+                    android:id="@+id/fbSnakerFGBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FG(长钉足球鞋)"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSnakerFGText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbSnakerFG"/>
+
+                <Button
+                    android:id="@+id/fbSnakerHGBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="HG(短钉足球鞋)"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSnakerHGText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbSnakerHG"/>
+
+                <Button
+                    android:id="@+id/fbSnakerAGBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AG(人草专用钉足球鞋)"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSnakerAGText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbSnakerAG"/>
+
+                <Button
+                    android:id="@+id/fbSnakerTFBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TF(碎钉足球鞋)"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSnakerTFText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbSnakerTF"/>
+
+                <Button
+                    android:id="@+id/fbSnakerICBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IC(室内足球鞋)"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbSnakerICText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbSnakerIC"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbSpecialOtherBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="其他"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbSpecialOtherLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbequipmentSel"/>
+
+                <ImageView
+                    android:id="@+id/timg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/fbChuliLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fbchuli_string"/>
+
+            <Button
+                android:id="@+id/fbCrampBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="抽筋"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbCrampLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbCramp_string"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/cramp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbChuliMuscleStrainBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="肌肉拉伤"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbChuliMuscleStrainLin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbMuscleStrain"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/fbmuscle1"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/fbmuscle2"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fbChuliJointStrainBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="关节拉伤"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <TextView
+                android:id="@+id/fbChuliJointStrainText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fbJointStrain"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/fbRICEBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RICE原则"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:paddingLeft="30dp"
+                android:textColor="#000"
+                android:background="#ffff"/>
+
+            <LinearLayout
+                android:id="@+id/fbRICELin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fbRICE"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/rice"/>
+
+                <Button
+                    android:id="@+id/fbRBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="R"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbRText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbR"/>
+
+                <Button
+                    android:id="@+id/fbIBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbIText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbI"/>
+
+                <Button
+                    android:id="@+id/fbCBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbCText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbC"/>
+
+                <Button
+                    android:id="@+id/fbEBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="E"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="60dp"
+                    android:textColor="#000"
+                    android:background="#ffff"/>
+
+                <TextView
+                    android:id="@+id/fbEText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/fbE"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/fbTiaoyangLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hello world"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
